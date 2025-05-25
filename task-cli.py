@@ -1,6 +1,5 @@
 import json
 import os
-from datetime import date
 import argparse
 
 FILENAME = 'tasks.json'
@@ -20,7 +19,7 @@ def save_tasks():
 
 
 def add_task(task_name):
-    tasks.append({"task": task_name, "date_created": date.today().strftime("%Y-%m-%d")})
+    tasks.append({"task": task_name, "todo": True, "in-progress": False, "done": False})
     save_tasks()
     print("task added successfully.")
 
@@ -62,7 +61,11 @@ update_parser.add_argument('index', nargs="?", type=int, help="Optional task ind
 delete_parser = subparser.add_parser("delete", help="Delete task")
 delete_parser.add_argument('index', nargs="?", type=int, help="Optional task index to delete")
 
-subparser.add_parser("list", help="List all tasks")  # don't need a return value, no parameter.
+mip_parser = subparser.add_parser("mark-in-progress", help="Mark a task as in progress")
+md_parser = subparser.add_parser("mark-done", help="Mark a task as done")
+
+list_parser = subparser.add_parser("list", help="List all tasks")
+
 
 args = parser.parse_args()
 tasks = load_tasks()
