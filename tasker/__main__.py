@@ -3,7 +3,7 @@ import os
 import argparse
 
 FILENAME = os.path.expanduser('~/Desktop/tasks.json')
-print("Tasks JSON file location:", os.path.abspath(FILENAME))
+# print("Tasks JSON file location:", os.path.abspath(FILENAME))
 
 
 def load_tasks():
@@ -119,7 +119,7 @@ def main():
                 update_task(task_list, args.index)
             else:
                 index = get_index_input(task_list, "Enter index of task to update: ")
-                add_task(task_list, index)
+                update_task(task_list, index)
         save_tasks(task_list)
 
     elif args.command == "delete":
