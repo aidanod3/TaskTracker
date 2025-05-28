@@ -14,4 +14,22 @@ If you prefer isolated installs, use pipx:
 pipx install git+https://github.com/username/TaskTracker.git
 ```
 
+## Usage:
+### Add a task:
+
+```
+> tasker add "set up onlyfans"
+```
+### Update a task:
+```
+> tasker update
+
+1. set up onlyfans (Todo)
+Enter index of task to update: 
+> 1
+```
+
+
+
+
 https://roadmap.sh/projects/task-tracker
