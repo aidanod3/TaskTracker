@@ -18,17 +18,28 @@ pipx install git+https://github.com/username/TaskTracker.git
 ### Add a task:
 
 ```
-> tasker add "set up onlyfans"
+> tasker add "buy eggs"
 ```
 ### Update a task:
 ```
 > tasker update
 
-1. set up onlyfans (Todo)
-Enter index of task to update: 
+1. buy eggs (Todo)
+Enter index of task to update:
 > 1
+Enter updated task name:
+> buy eggs and bacon
+Task updated successfully.
 ```
 
+### Delete a task:
+```
+> tasker delete [index]
+```
+### List tasks:
+```
+> tasker list [todo, in-progress, done]
+```
 
 
 
