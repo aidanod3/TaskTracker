@@ -23,13 +23,11 @@ pipx install git+https://github.com/username/TaskTracker.git
 ### Update a task:
 ```
 > tasker update
-
 1. buy eggs (Todo)
 Enter index of task to update:
 > 1
 Enter updated task name:
 > buy eggs and bacon
-Task updated successfully.
 ```
 
 ### Delete a task:
@@ -39,6 +37,12 @@ Task updated successfully.
 ### List tasks:
 ```
 > tasker list [todo, in-progress, done]
+```
+### Mark tasks:
+```
+> tasker mark-todo [index]
+> tasker mark-in-progress [index]
+> tasker mark-as-done [index]
 ```
 
 
