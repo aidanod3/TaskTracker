@@ -17,21 +17,21 @@ def save_tasks(tasks):
 
 def add_task(tasks, new_task):
     tasks.append({"task": new_task, "status": "Todo"})
-    print("task added successfully.")
+    print("Task added successfully.")
     return tasks
 
 
 def update_task(tasks, index):
-    print("type updated task name: ")
+    print("Enter updated task name: ")
     updated_task_name = input()
     tasks[int(index) - 1]["task"] = updated_task_name
-    print("task updated successfully.")
+    print("Task updated successfully.")
     return tasks
 
 
 def delete_task(tasks, index):
     tasks.pop(int(index) - 1)
-    print("task deleted successfully")
+    print("Task deleted successfully")
     return tasks
 
 
